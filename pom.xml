@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>sir</groupId>
+  <artifactId>tp1_sir</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>tp1_sir</name>
+  <url>http://maven.apache.org</url>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+   
+   <dependency>
+    <groupId>org.swinglabs</groupId>
+    <artifactId>swingx</artifactId>
+    <version>1.6.1</version>
+	</dependency>
+   
+  </dependencies>
+  
+  <build>
+    <plugins>
+    
+   	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+        <configuration>
+          <port>9000</port>
+          <tempWebappDirectory>${basedir}/target/site/tempdir</tempWebappDirectory>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
+  <reporting>
+<plugins>
+   <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+
+        </plugin>
+  
+     
+  
+   
+
+          <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-checkstyle-plugin</artifactId>
+              <version>3.0.0</version>
+                <configuration>
+          <configLocation>google_checks.xml</configLocation>
+        </configuration>
+          </plugin>
+          <plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-pmd-plugin</artifactId>
+ <version>2.5</version>
+</plugin>
+          <plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-changelog-plugin</artifactId> </plugin>
+          
+    </plugins>
+ </reporting>
+ <scm>
+<connection>scm:svn:svn://github.com/nastia111/tp1-sir.git</connection>
+ <url>https://github.com/nastia111/tp1-sir.git</url>
+</scm>
+ 
+  
+</project>
